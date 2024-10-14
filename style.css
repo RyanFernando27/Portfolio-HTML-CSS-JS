@@ -114,15 +114,6 @@ line-height: 1.4;
   font-family: "Playfair Display";
 }
 
-/* ANIMATION TO TOPIC */
-@keyframes slideInLeft {
-  from{
-    transform: translateX(-300px);
-  }
-  to{
-    transform: translate(0);
-  }
-}
 .main-content span , section>h1{
   animation: slideInLeft 0.8s ease-in-out ;
 }
@@ -138,11 +129,11 @@ line-height: 1.4;
 .social-links {
   animation: slideInBottom 0.8s ease-in-out ;
   position: absolute;
-  margin-top: 48%;
-  margin-left: 5%;
+ top: 90%;
+ left: 5%;
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: left;
+  justify-content: space-between;
 
 }
 .link-img {
