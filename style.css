@@ -61,6 +61,7 @@ header{
     position: fixed;
     align-items: center;
     padding: 35px 5%;
+    background-color: rgba(21, 21, 21, 0.099);
     backdrop-filter: blur(20px);
     z-index: 9999; 
 }
@@ -177,11 +178,11 @@ footer{
 }
 
 
-/* projects html styles */
+/* --------------------------Projects Page---------------------- */
 
 section>h1{
-    top: 25%;
-  left: 5%;
+    top: 15%;
+    left: 5%;
     position:absolute ;
     font-family:var(--topic-color) ;
     text-decoration: underline;
@@ -197,10 +198,10 @@ section>h1{
 }
 .project-content{
     top: 35%;
-    left: 10%;
+    left:10%;
     position: absolute;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(500px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
     justify-content: center;
 }
 .card{
@@ -226,19 +227,43 @@ section>h1{
     background-position: center;
     
 }
+/* ------------------------Project Page END------------------ */
+
+/* ------------------------ ABOUT PAGE------------------ */
+
+.about-container{
+position: absolute;
+top: 30%;
+left: 5%;
+width: 90%;
+height: 60%;
+background-color: #353535;
+
+}
+.about-container > img{
+    width: 30%;
+    float: right;
+    right: 0;
+}
+
+/* ------------------------About Page END------------------ */
 
 
-/* Media Queries */
+/* -----------------Media Queries --------------------------*/
 @media (max-width: 600px) {
+
+    /* Main Page */
     header {
-        position: relative;
+       position: absolute;
         padding: 0;
         height: 20%;
         font-size: 20px;
         display: block;
         text-align: center;
-
         
+    }
+    .content{
+        top: 60%;
     }
     li{
         display: inline-block;
@@ -254,17 +279,25 @@ section>h1{
     .content{
        text-align: center;
     }
-
-  
-   
-  }
-  @media (max-width: 450px) {
-    *{
-        font-size: 10px;
-    }
-    .content h1{
+    section>h1{
+        top: 30%;
         font-size: 20px;
     }
+    /* About page */
+
+    .about-container{
+        top: 40%;
+    }
+  
+
+  }
+  @media (max-width: 450px) {
+    body{
+        font-size: 10px;
+    }
+
+
+
 
   }
 
