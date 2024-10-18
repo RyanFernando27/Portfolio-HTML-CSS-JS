@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700&display=swap');
 * {
   box-sizing: border-box;
   margin: 0;
@@ -25,6 +25,7 @@ p {
   --topic-font:"Playfair Display";
   --background-color: rgb(240, 245, 218);
   --hover-color: #ffff;
+
 }
 .active-page {
   text-decoration: underline;
@@ -149,10 +150,9 @@ footer {
 /* --------------------------Projects Page---------------------- */
 
 section > h1 {
+  margin-top: 5%;
+  margin-bottom: 5%;
   animation: slideInLeft 0.8s ease-in-out ;
-  top: 15%;
-  left: 5%;
-  position: absolute;
   font-family: var(--topic-font);
   font-size: 50px;
 }
@@ -169,7 +169,7 @@ section > h1 {
   text-align: center;
  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
   border-radius: 20px;
-  margin: 5% 10%;
+  margin: 0% 10%;
   padding: 20px;
   height: auto;
   transition: all 0.5s;
@@ -210,6 +210,63 @@ section > h1 {
 }
 
 /* ------------------------About Page END------------------ */
+
+/* ------------------------Blog Page----------------------- */
+
+.blog-container{
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+ column-gap: 5%;
+ row-gap: 5%;
+ 
+
+
+}
+.blog-post{
+  
+  cursor: pointer;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  margin-bottom: 5%;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: 1s all;
+
+}
+.blog-post:hover{
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.blog-post img{
+  opacity: 0.8;
+  width: 100%;
+  height: 300px;
+}
+.blog-post img:hover{
+  opacity: 1;
+  
+}
+.blog-text{
+  padding: 10px;
+  
+}
+.blog-title{
+  font-family: "Poppins";
+  font-weight: 200;
+  font-size: 12px;
+}
+.blog-head{
+  font-family: "Poppins";
+  font-weight: 700;
+  font-size: 18px;
+}
+.blog-content{
+ padding: 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis; 
+
+}
 
 /* -----------------Media Queries --------------------------*/
 @media (max-width: 600px) {
