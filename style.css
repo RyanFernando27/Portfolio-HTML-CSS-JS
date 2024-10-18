@@ -218,9 +218,6 @@ section > h1 {
  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
  column-gap: 5%;
  row-gap: 5%;
- 
-
-
 }
 .blog-post{
   
