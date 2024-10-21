@@ -256,11 +256,10 @@ section > h1 {
   font-size: 18px;
 }
 .blog-content{
- padding: 10px;
+ padding-left: 10px;
+ padding-right: 5px;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical; 
+
   text-overflow: ellipsis; 
 
 }
