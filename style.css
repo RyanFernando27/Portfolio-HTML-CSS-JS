@@ -180,7 +180,7 @@ section > h1 {
 
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
-
+/* Attribute selectors */
 [title~="prj-img"]{
   padding: 10px;
   width: 100%;
@@ -264,7 +264,33 @@ section > h1 {
 
 }
 
-/* -----------------Media Queries --------------------------*/
+/* -------------------  Subscribe Page  ---------------------- */
+form{
+ margin-top: 5%;
+  text-align: center;
+}
+input[type="text"]{
+  font-size: 20px;
+  border: none;
+  width: 50%;
+  height: 40px;
+  margin-bottom: 5%;
+  background-color: #FFFFF2;
+  padding: 10px;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+input:focus{
+  outline: none;
+  border-bottom: 3px solid rgb(0, 255, 8);
+}
+.subscribe-btn:hover{
+  background-color: #353535;
+  color: white;
+
+}
+
+
+/* -----------------  Media Queries --------------------------*/
 @media (max-width: 600px) {
   /* Main Page */
   header {
