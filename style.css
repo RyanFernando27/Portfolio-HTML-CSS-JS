@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;700&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,20 +12,18 @@
 
 /* Whole website theme */
 body {
-  background-color: #FFFFF2;
-  padding:5%;
+  background-color: #ffffe0;
+  padding: 5%;
 }
 /* Default paragraph settings */
 p {
   line-height: 1.5;
-  
 }
 /* Varibles for website */
 :root {
-  --topic-font:"Playfair Display";
+  --topic-font: "Playfair Display";
   --background-color: rgb(240, 245, 218);
   --hover-color: #ffff;
-
 }
 .active-page {
   text-decoration: underline;
@@ -56,12 +54,12 @@ header {
   left: 0;
   top: 0;
   height: 50px;
- width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   position: fixed;
   align-items: center;
-  padding:3% 5%;
+  padding: 3% 5%;
   backdrop-filter: blur(20px);
   z-index: 9999;
 }
@@ -100,21 +98,20 @@ li {
 }
 
 [title~="bold-text-name"] {
-line-height: 1.4;
+  line-height: 1.4;
   margin-left: 10%;
   font-size: 80px;
   font-family: "Playfair Display";
 }
 .main-para {
-  margin:5% 10% 5% 35% ;
-  animation: slideInRight 0.8s ease-in-out ;
+  margin: 5% 10% 5% 35%;
+  animation: slideInRight 0.8s ease-in-out;
 }
 
 .social-links {
-  animation: slideInBottom 0.8s ease-in-out ;
- margin-top: 10%;
+  animation: slideInBottom 0.8s ease-in-out;
+  margin-top: 10%;
   display: flex;
- 
 }
 .link-img {
   margin-right: 10px;
@@ -132,14 +129,14 @@ line-height: 1.4;
   background-color: rgb(171, 235, 255);
 }
 
-.sec2{
+.sec2 {
   margin-top: 6%;
 }
 
 /* Footer styles */
 footer {
   padding-left: 10%;
- padding: 2% 5%;
+  padding: 2% 5%;
   background-color: #ca6f6f;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -152,7 +149,7 @@ footer {
 section > h1 {
   margin-top: 5%;
   margin-bottom: 5%;
-  animation: slideInLeft 0.8s ease-in-out ;
+  animation: slideInLeft 0.8s ease-in-out;
   font-family: var(--topic-font);
   font-size: 50px;
 }
@@ -167,21 +164,20 @@ section > h1 {
 }
 .card {
   text-align: center;
- box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
   margin: 0% 10%;
   padding: 20px;
   height: auto;
   transition: all 0.5s;
-  
- 
 }
 .card:hover {
-
-  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 /* Attribute selectors */
-[title~="prj-img"]{
+[title~="prj-img"] {
   padding: 10px;
   width: 100%;
   margin-bottom: 10px;
@@ -189,107 +185,125 @@ section > h1 {
   border-radius: 25px;
   background-position: center;
 }
+
 /* ------------------------Project Page END------------------ */
 
 /* ------------------------ ABOUT PAGE------------------ */
 
 .about-container {
-  position: absolute;
-  top: 30%;
-  left: 5%;
-  width: 90%;
-  height: 60%;
-  background-color: #353535;
+  width: 100%;
   overflow: hidden;
+  display: flex;
 }
-.about-container > img {
-  width: 30%;
-  border-radius: 50%;
+.about-content {
+  padding-right: 5%;
+}
+
+.about-pic {
+  width: 100%;
+}
+.about-container img {
+  width: 100%;
   float: right;
+  border-radius: 20px;
+  filter: grayscale(100%);
+}
+
+.about-para {
+  line-height: 2;
+}
+.about-content > :not(.about-para) {
+  font-size: 40px;
+  font-weight: bold;
+}
+.about-highlight {
+  font-style: italic;
+  background-image: linear-gradient(to right, #f9dd94 0%, #f9dd94 100%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 100% 3px;
 }
 
 /* ------------------------About Page END------------------ */
 
 /* ------------------------Blog Page----------------------- */
 
-.blog-container{
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
- column-gap: 5%;
- row-gap: 5%;
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  column-gap: 5%;
+  row-gap: 5%;
 }
-.blog-post{
-  
+.blog-post {
   cursor: pointer;
   border-radius: 5px;
   padding-bottom: 10px;
   margin-bottom: 5%;
   box-shadow: rgba(40, 123, 207, 0.2) 0px 8px 24px;
   transition: 0.5s all;
-
 }
-.blog-post:hover{
+.blog-post:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 25px;
 }
-.blog-post img{
+.blog-post img {
   opacity: 0.5;
   width: 100%;
   height: 300px;
 }
-.blog-post img:hover{
+.blog-post img:hover {
   opacity: 1;
-  
 }
-.blog-text{
+.blog-text {
   padding: 10px;
-  
 }
-.blog-title{
+.blog-title {
   font-family: "Poppins";
   font-weight: 200;
   font-size: 12px;
 }
-.blog-head{
+.blog-head {
   font-family: "Poppins";
   font-weight: 700;
   font-size: 18px;
 }
-.blog-content{
- padding-left: 10px;
- padding-right: 5px;
+.blog-content {
+  padding-left: 10px;
+  padding-right: 5px;
   overflow: hidden;
-
-  text-overflow: ellipsis; 
-
+  text-overflow: ellipsis;
+}
+.blog-container .blog-post:nth-child(even) {
+  background-color: rgb(252, 252, 182);
 }
 
 /* -------------------  Subscribe Page  ---------------------- */
-form{
- margin-top: 5%;
+form {
+  margin-top: 5%;
   text-align: center;
 }
-input[type="text"]{
+input[type="text"] {
   font-size: 20px;
   border: none;
   width: 50%;
   height: 40px;
   margin-bottom: 5%;
-  background-color: #FFFFF2;
+  background-color: #fffff2;
   padding: 10px;
   border-bottom: 3px solid rgb(0, 0, 0);
 }
-input:focus{
+input:focus {
   outline: none;
   border-bottom: 3px solid rgb(0, 255, 8);
 }
-
-.subscribe-btn:hover{
-  background-color: #353535;
-  color: white;
-
+input:valid{
+  border: 1px solid black;
+  background-color: #e1ffd5;
 }
 
-
+.subscribe-btn:hover {
+  background-color: #353535;
+  color: white;
+}
 
 /* -----------------  Media Queries --------------------------*/
 @media (max-width: 600px) {
@@ -335,28 +349,26 @@ input:focus{
 
 /* ANIMATION PANE */
 @keyframes slideInLeft {
-  from{
+  from {
     transform: translateX(-300px);
   }
-  to{
+  to {
     transform: translate(0);
   }
 }
 @keyframes slideInRight {
-  from{
+  from {
     transform: translateX(200px);
   }
-  to{
+  to {
     transform: translate(0);
   }
 }
 @keyframes slideInBottom {
-  from{
+  from {
     transform: translateY(100px);
   }
-  to{
+  to {
     transform: translateY(0);
   }
-  
 }
-
