@@ -91,6 +91,31 @@ li {
 .news-btn:active {
   background-color: aqua;
 }
+.hamburger-menu{
+  display: none;
+  text-align: right;
+}
+.close-btn{
+  position:absolute;
+  top: 10%;
+  right: 10%;
+  
+}
+#mobile-nav{
+  display: none;
+  position: fixed;
+  padding: 20% 5% 10% 5%;
+  right: 0;
+  top: 0;
+  align-items: center;
+  line-height: 3;
+  height: 100%;
+  text-align: center;
+ justify-content: space-between;
+ backdrop-filter: blur(20px);
+ background-color: rgba(255, 255, 255, 0.317);
+}
+
 /*----------------------- MAIN PAGE  -----------------------*/
 
 .main-container {
@@ -157,6 +182,7 @@ section > h1 {
 .project-content {
   top: 35%;
   left: 10%;
+  right: 10%;
   position: absolute;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -166,7 +192,7 @@ section > h1 {
   text-align: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
-  margin: 0% 10%;
+  margin: 4% 10%;
   padding: 20px;
   height: auto;
   transition: all 0.5s;
@@ -307,43 +333,43 @@ input:valid{
 
 /* -----------------  Media Queries --------------------------*/
 @media (max-width: 600px) {
+  body{
+    font-size: 10px;
+    margin: 5% 10% 5% 10%;
+  }
   /* Main Page */
   header {
-    position: absolute;
-    padding: 0;
-    height: 20%;
-    font-size: 20px;
-    display: block;
-    text-align: center;
+    display: none;
   }
-  .main-content {
-    top: 60%;
-  }
-  li {
-    display: inline-block;
-    padding: 5px;
-    width: 50%;
-    font-size: 20px;
-  }
-  .news-btn {
-    padding: 9px 10px;
-  }
-  .main-content {
-    text-align: center;
-  }
-  section > h1 {
-    top: 30%;
-    font-size: 20px;
+  [title~="bold-text-name"]{
+    font-size: 50px;
+
   }
   /* About page */
-
   .about-container {
     top: 40%;
   }
 }
-@media (max-width: 450px) {
-  body {
-    font-size: 10px;
+@media (max-width: 962px) {
+  .hamburger-menu{
+    display: block;
+  }
+  /* #mobile-nav{
+    display: flex;
+    justify-content: space-between;
+  } */
+  #mobile-nav{
+  display:none;
+  }
+  .nav-links>li{
+    display: block;
+  }
+  header {
+    display: none;
+  }
+  .main-para{
+    margin: 5% 10% 5% 10%;
+    text-align: center;
   }
 }
 
