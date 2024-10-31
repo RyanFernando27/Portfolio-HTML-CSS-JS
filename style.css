@@ -13,7 +13,6 @@
 /* Whole website theme */
 body {
   background-color: #ffffe0;
-  padding: 5%;
 }
 /* Default paragraph settings */
 p {
@@ -21,6 +20,7 @@ p {
 }
 /* Varibles for website */
 :root {
+  --margin: 10% 5% 5% 5%;
   --topic-font: "Playfair Display";
   --background-color: rgb(240, 245, 218);
   --hover-color: #ffff;
@@ -96,6 +96,7 @@ li {
 .hamburger-menu {
   display: none;
   text-align: right;
+  margin: var(--margin);
 }
 .close-btn {
   position: absolute;
@@ -123,6 +124,7 @@ li {
 
 .main-container {
   padding-bottom: 50px;
+  margin: var(--margin);
 }
 
 [title~="bold-text-name"] {
@@ -138,7 +140,6 @@ li {
 
 .social-links {
   animation: slideInBottom 0.8s ease-in-out;
-  margin-top: 10%;
   display: flex;
 }
 .link-img {
@@ -163,9 +164,11 @@ li {
 
 /* Footer styles */
 footer {
-  padding-left: 10%;
+  position: absolute;
+ width: 100%;
+  
   padding: 2% 5%;
-  background-color: #ca6f6f;
+  background-color: #000000;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -175,8 +178,9 @@ footer {
 /* --------------------------Projects Page---------------------- */
 
 section > h1 {
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-top: 10%;
+  margin-bottom: 2%;
   animation: slideInLeft 0.8s ease-in-out;
   font-family: var(--topic-font);
   font-size: 50px;
@@ -188,14 +192,16 @@ section > h1 {
   right: 10%;
   position: absolute;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
+  row-gap: 50px;
+  column-gap: 50px;
 }
 .card {
   text-align: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
-  margin: 4% 10%;
+ 
   padding: 20px;
   height: auto;
   transition: all 0.5s;
@@ -220,14 +226,12 @@ section > h1 {
 /* ------------------------ ABOUT PAGE------------------ */
 
 .about-container {
-  width: 100%;
-  overflow: hidden;
+  margin: 5%;
   display: flex;
 }
 .about-content {
-  padding-right: 5%;
+  padding-right: 50px;
 }
-
 .about-pic {
   width: 100%;
 }
@@ -258,10 +262,15 @@ section > h1 {
 /* ------------------------Blog Page----------------------- */
 
 .blog-container {
+  top: 35%;
+  left: 5%;
+  right: 5%;
+  position: absolute;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  column-gap: 5%;
-  row-gap: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+  column-gap: 50px;
+  row-gap: 50px;
 }
 .blog-post {
   cursor: pointer;
