@@ -9,7 +9,16 @@
   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
-
+/* Scroll Styles */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34ffeb;
+}
 /* Whole website theme */
 body {
   background-color: #ffffe0;
@@ -20,10 +29,11 @@ p {
 }
 /* Varibles for website */
 :root {
-  --margin: 10% 5% 5% 5%;
+  --margin: 5%;
   --topic-font: "Playfair Display";
   --background-color: rgb(240, 245, 218);
   --hover-color: #ffff;
+  --secondary-color: rgb(85, 85, 85);
 }
 .active-page {
   text-decoration: underline;
@@ -53,7 +63,7 @@ button {
 header {
   left: 0;
   top: 0;
-  height: 50px;
+  height: 40px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -123,8 +133,8 @@ li {
 /*----------------------- MAIN PAGE  -----------------------*/
 
 .main-container {
-  padding-bottom: 50px;
   margin: var(--margin);
+  padding-top: 2%;
 }
 
 [title~="bold-text-name"] {
@@ -134,7 +144,7 @@ li {
   font-family: "Playfair Display";
 }
 .main-para {
-  margin: 5% 10% 5% 35%;
+  margin: 5% 10% 10% 35%;
   animation: slideInRight 0.8s ease-in-out;
 }
 
@@ -165,8 +175,7 @@ li {
 /* Footer styles */
 footer {
   position: absolute;
- width: 100%;
-  
+  width: 100%;
   padding: 2% 5%;
   background-color: #000000;
   color: white;
@@ -201,7 +210,6 @@ section > h1 {
   text-align: center;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 20px;
- 
   padding: 20px;
   height: auto;
   transition: all 0.5s;
@@ -262,10 +270,7 @@ section > h1 {
 /* ------------------------Blog Page----------------------- */
 
 .blog-container {
-  top: 35%;
-  left: 5%;
-  right: 5%;
-  position: absolute;
+  margin: var(--margin);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   justify-content: center;
@@ -274,27 +279,27 @@ section > h1 {
 }
 .blog-post {
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
   padding-bottom: 10px;
   margin-bottom: 5%;
-  box-shadow: rgba(40, 123, 207, 0.2) 0px 8px 24px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   transition: 0.5s all;
 }
 .blog-post:hover {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 25px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
 .blog-post img {
-  opacity: 0.5;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   width: 100%;
   height: 300px;
-}
-.blog-post img:hover {
-  opacity: 1;
 }
 .blog-text {
   padding: 10px;
 }
-.blog-title {
+.blog-location {
   font-family: "Poppins";
   font-weight: 200;
   font-size: 12px;
@@ -307,9 +312,19 @@ section > h1 {
 .blog-content {
   padding-left: 10px;
   padding-right: 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  color: var(--secondary-color);
+  font-size: 15px;
+  line-height: 1.5;
+  overflow: hidden; /* Hides the overflowed text */
+  text-overflow: ellipsis; /* Adds ellipsis for overflowed text */
+  display: -webkit-box; /* Enables flexbox model */
+  -webkit-box-orient: vertical; /* Sets the orientation */
+  -webkit-line-clamp: 3; /* Limits the number of lines to 3 */
+  line-clamp: 3;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  max-height: 100px;
 }
+
 .blog-container .blog-post:nth-child(even) {
   background-color: rgb(252, 252, 182);
 }
