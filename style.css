@@ -261,7 +261,7 @@ section > h1 {
 }
 .about-container img {
   width: 100%;
-  float: right;
+ 
   border-radius: 20px;
   filter: grayscale(100%);
 }
@@ -419,6 +419,11 @@ input:valid {
   .about-container{
     display: block;
   }
+  .about-container img {
+    width: 50%;
+    margin: auto;
+    display: block;
+
 }
 
 /* ANIMATION PANE */
