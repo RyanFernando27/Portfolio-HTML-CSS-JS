@@ -209,6 +209,7 @@ footer {
 
 /* --------------------------Projects Page---------------------- */
 
+/* topic styles for all pages*/
 section > h1 {
   margin-left: 5%;
   margin-top: 10%;
@@ -241,7 +242,7 @@ section > h1 {
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 }
-/* Attribute selectors */
+
 [title~="prj-img"] {
   padding: 10px;
   width: 100%;
@@ -361,7 +362,7 @@ form {
   margin-left: 5%;
   margin-top: 5%;
 }
-
+/* Input text styles */
 input[type="text"] {
   font-size: 20px;
   border: none;
